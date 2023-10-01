@@ -1,0 +1,12 @@
+<div class="hero-container">
+	<h1>Heroes</h1>
+	<button mat-fab color="primary" routerLink="/new-hero">
+		<mat-icon>add</mat-icon>
+	</button>
+	<div class="hero-card-container">
+		<app-hero-item
+		*ngFor="let hero of heroes"
+		[hero]="hero" (click)="goToHero(hero)"
+		></app-hero-item>
+	</div>
+</div>

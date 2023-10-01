@@ -1,0 +1,11 @@
+<div>
+	<form [formGroup]="heroForm" (ngSubmit)="saveOrUpdateHero()" class="hero-form">
+		<mat-form-field>
+			<mat-label>Name</mat-label>
+			<input matInput formControlName="nameInput"/>
+		</mat-form-field>
+
+		<button *ngIf="hero.id == null" mat-raised-button type="submit" color="primary">Save</button>
+		<button *ngIf="hero.id != null" mat-raised-button type="submit" color="primary">Update</button>
+	</form>
+</div>

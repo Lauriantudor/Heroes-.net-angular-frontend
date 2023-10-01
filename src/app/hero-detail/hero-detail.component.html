@@ -1,0 +1,16 @@
+<h1>Hero</h1>
+<div class="hero-div">
+
+<mat-card class="hero-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{hero.name}}</mat-card-title>
+
+
+<mat-card-actions>
+<button mat-raised-button color="primary" [routerLink]= "updateHeroUrl" >Update</button>
+<button mat-raised-button color="warn" (click)=" openConfirmationDialog()">Delete</button>
+</mat-card-actions>
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
